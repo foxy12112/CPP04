@@ -6,7 +6,7 @@
 /*   By: ldick <ldick@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/24 19:29:53 by ldick             #+#    #+#             */
-/*   Updated: 2025/06/25 03:34:03 by ldick            ###   ########.fr       */
+/*   Updated: 2025/06/25 18:53:39 by ldick            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,23 +18,30 @@
 
 int main()
 {
-	const WrongAnimal *wrongMeta = new WrongAnimal();
-	const WrongAnimal *k = new WrongCat();
-	const Animal* meta = new Animal();
-	const Animal* j = new Dog();
-	const Animal* i = new Cat();
-	std::cout << j->getType() << " " << std::endl;
-	std::cout << i->getType() << " " << std::endl;
-	std::cout << k->getType() << " " << std::endl;
-	i->makeSound(); //will output the cat sound!
-	j->makeSound();
-	meta->makeSound();
-	wrongMeta->makeSound();
-	k->makeSound();
-	delete wrongMeta;
-	delete k;
-	delete j;
-	delete meta;
-	delete i;
-	return 0;
+	std::cout << "Animal sounds" << std::endl;
+
+	const Animal *a = new Cat();
+	const Animal *b = new Dog();
+	const Animal c;
+
+	a->makeSound();
+	b->makeSound();
+	c.makeSound();
+	delete a;
+	delete b;
+	std::cout << "\n\n" << std::endl;
+	
+	const Animal *many[50];
+	for (int i = 0; i < 50; i++)
+	{
+		if (i < 25)
+			many[i] = new Cat();
+		else
+			many[i] = new Dog();
+	}
+	for (int i = 0; i < 50; i++)
+		many[i]->makeSound();
+	for (int i = 0; i < 50; i++)
+		delete many[i];
+	
 }

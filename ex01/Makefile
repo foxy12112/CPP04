@@ -6,11 +6,11 @@
 #    By: ldick <ldick@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/18 19:28:14 by ldick             #+#    #+#              #
-#    Updated: 2025/06/25 04:42:34 by ldick            ###   ########.fr        #
+#    Updated: 2025/06/25 18:55:32 by ldick            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = "I don’t want to set the world on fire"
+NAME = "I_dont_want_to_set_the_world_on_fire"
 
 #################################################################################################
 #											Colors												#
@@ -37,7 +37,7 @@ ERROR_FILE	=	error.log
 #											Sources												#
 #################################################################################################
 
-SRCS			=	main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp Brain.cpp Brain.hpp
+SRCS			=	main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp Brain.cpp
 
 OBJS			=	$(SRCS:%.c=bin/%.o)
 
