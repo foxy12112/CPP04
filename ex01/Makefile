@@ -6,7 +6,7 @@
 #    By: ldick <ldick@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/18 19:28:14 by ldick             #+#    #+#              #
-#    Updated: 2025/06/25 18:55:32 by ldick            ###   ########.fr        #
+#    Updated: 2025/06/26 14:36:19 by ldick            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,14 +30,14 @@ NC			:= \033[0m
 #################################################################################################
 
 COMPILER	=	c++
-CFLAGS		=	-Wall -Werror -Wextra -std=c++98
+CFLAGS		=	-Wall -Werror -Wextra -std=c++98 -g
 ERROR_FILE	=	error.log
 
 #################################################################################################
 #											Sources												#
 #################################################################################################
 
-SRCS			=	main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp Brain.cpp
+SRCS			=	main.cpp Animal.cpp Dog.cpp Cat.cpp Brain.cpp
 
 OBJS			=	$(SRCS:%.c=bin/%.o)
 
